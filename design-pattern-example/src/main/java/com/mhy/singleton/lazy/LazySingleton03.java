@@ -11,10 +11,11 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class LazySingleton03 {
-    private static LazySingleton03 INSTANCE = null;
+
+    private static volatile LazySingleton03 INSTANCE = null;
 
     private LazySingleton03() {
-        System.out.println("LazySingleton01 init ......");
+        System.out.println("LazySingleton03 init ......");
     }
 
     public static LazySingleton03 getInstance() {
@@ -30,6 +31,6 @@ public class LazySingleton03 {
     }
 
     public void doSomething() {
-        log.info("LazySingleton01.doSomething ......");
+        log.info("LazySingleton03.doSomething ......");
     }
 }

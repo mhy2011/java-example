@@ -14,7 +14,7 @@ public class LazySingleton02 {
     private static LazySingleton02 INSTANCE = null;
 
     private LazySingleton02() {
-        System.out.println("LazySingleton01 init ......");
+        System.out.println("LazySingleton02 init ......");
     }
 
     // 同步方法，解决线程不安全的问题，但带来了更严重的问题，该方法不支持并发访问了
@@ -26,6 +26,6 @@ public class LazySingleton02 {
     }
 
     public void doSomething() {
-        log.info("LazySingleton01.doSomething ......");
+        log.info("LazySingleton02.doSomething ......");
     }
 }
